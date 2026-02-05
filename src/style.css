@@ -218,3 +218,45 @@ body {
     width: 90% !important; /* Να ακολουθεί το πλάτος του container */
     max-width: 450px;
 }
+
+
+
+/* Media Query για συσκευές με πλάτος έως 600px (Κινητά) */
+@media (max-width: 600px) {
+    
+    /* 1. Μετακίνηση του Legend πιο πάνω */
+    .leaflet-bottom.leaflet-right {
+        bottom: 25px !important; /* Το σηκώνουμε 25 pixels από το τέλος */
+        right: 10px !important;
+    }
+
+    .legend {
+        font-size: 11px;
+        padding: 8px;
+        max-width: 140px;
+        line-height: 1.4;
+    }
+
+    /* 2. Σωστά περιθώρια στα Popups */
+    .leaflet-popup {
+        margin-bottom: 20px; /* Απόσταση από το σημείο που πατήσαμε */
+    }
+
+    .leaflet-popup-content-wrapper {
+        border-radius: 12px;
+        padding: 5px;
+        /* Εξασφαλίζουμε ότι το popup δεν θα βγαίνει έξω από την οθόνη */
+        max-width: 280px; 
+    }
+
+    .leaflet-popup-content {
+        margin: 12px 15px !important; /* Περιθώρια μέσα στο popup */
+        width: 250px !important; /* Σταθερό πλάτος για να είναι κεντραρισμένο */
+        line-height: 1.5;
+    }
+
+    /* Προαιρετικά: Μικραίνουμε λίγο τα controls του Zoom για να μην πιάνουν χώρο */
+    .leaflet-control-zoom {
+        margin-top: 80px !important; /* Το κατεβάζουμε για να μην πέφτει πάνω στο Search */
+    }
+}
