@@ -1,0 +1,92 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#map {
+  height: 100vh; /* 100% του ύψους της οθόνης */
+  width: 100%;
+}
+
+
+
+
+#map {
+    height: 100vh; /* vh = viewport height, δηλαδή 100% του ύψους της οθόνης */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Βάζουμε ένα χρώμα για να δούμε αν εμφανίζεται το κουτί */
+}
+
+body {
+    margin: 0;
+}
+
+
+.legend {
+    padding: 10px;
+    background: white;
+    line-height: 18px;
+    color: #555;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+
+
+
+
+/* Styling για το Autocomplete Dropdown */
+#autocomplete-list {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    z-index: 1000;
+    width: 250px; /* Ίδιο με το πλάτος του input σου */
+    max-height: 200px;
+    overflow-y: auto;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.autocomplete-item {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: sans-serif;
+    border-bottom: 1px solid #eee;
+}
+
+.autocomplete-item:hover {
+    background-color: #f8f9fa;
+    color: #3498db;
+}
+
+
+
+/* Το στυλ για το κουμπί πληροφοριών πάνω στην περιοχή */
+.info-icon-btn {
+    background-color: #3498db;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-family: serif;
+    font-size: 18px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    cursor: pointer;
+    border: 2px white solid;
+}
