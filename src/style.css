@@ -90,3 +90,131 @@ body {
     cursor: pointer;
     border: 2px white solid;
 }
+
+
+
+      /* Βασικό στυλ για να μην χρειάζεται να αλλάξεις το CSS αρχείο σου ακόμα */
+      #map {
+        height: 100vh;
+        width: 100%;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #search-container {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+        background: white;
+        padding: 10px;
+        border-radius: 30px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        display: flex;
+        gap: 8px;
+        border: 1px solid #ddd;
+      }
+      #addr-input {
+        width: 300px;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 20px;
+        outline: none;
+        font-size: 14px;
+      }
+      #search-btn {
+        padding: 10px 20px;
+        background: #3498db;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background 0.3s;
+      }
+      #search-btn:hover {
+        background: #2980b9;
+      }
+   
+
+
+
+/* 1. Βασική ρύθμιση για το search container */
+#search-container {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background: white;
+    padding: 8px;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: flex;
+    gap: 5px;
+    width: 90%; /* Χρησιμοποιούμε ποσοστό αντί για σταθερό πλάτος */
+    max-width: 450px; /* Μέγιστο πλάτος για μεγάλες οθόνες */
+}
+
+#addr-input {
+    flex-grow: 1; /* Το input θα πιάνει όσο χώρο περισσεύει */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    font-size: 16px; /* 16px για να μην κάνει αυτόματο zoom το iOS */
+}
+
+#search-btn {
+    padding: 10px 15px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    white-space: nowrap; /* Για να μην κόβεται το κείμενο του κουμπιού */
+}
+
+/* 2. Media Queries για κινητά (έως 600px) */
+@media (max-width: 600px) {
+    #search-container {
+        top: 10px;
+        padding: 5px;
+    }
+
+    #addr-input {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    #search-btn {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    /* Κρύβουμε το Legend στα πολύ μικρά κινητά ή το κάνουμε μικρότερο */
+    .legend {
+        font-size: 10px;
+        padding: 6px;
+        max-width: 120px;
+    }
+
+    /* Ρυθμίσεις για τα popups του Leaflet */
+    .leaflet-popup-content-wrapper {
+        border-radius: 8px;
+    }
+    
+    .leaflet-popup-content {
+        width: 220px !important; /* Περιορίζουμε το πλάτος του popup */
+        margin: 10px;
+    }
+}
+
+/* 3. Διόρθωση για το Autocomplete List */
+#autocomplete-list {
+    width: 90% !important; /* Να ακολουθεί το πλάτος του container */
+    max-width: 450px;
+}
